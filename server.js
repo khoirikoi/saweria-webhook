@@ -3,7 +3,7 @@
 // ===========================
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors"); // ✅ IMPORTANT: Tambah ini
+// const cors = require("cors");  // ❌ COMMENT DULU
 
 // ✅ Import fetch (karena Node.js v18+ tidak otomatis punya)
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
@@ -12,7 +12,7 @@ const app = express();
 
 // ✅ MIDDLEWARE (Tambahkan ini)
 app.use(bodyParser.json());
-app.use(cors()); // ✅ ENABLE CORS UNTUK SEMUA REQUEST
+// app.use(cors());  // ❌ COMMENT DULU
 
 // ===========================
 // 🌐 Cek apakah server aktif
